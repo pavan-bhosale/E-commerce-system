@@ -83,7 +83,7 @@ export const CustomerLayout: React.FC = () => {
           <div className="relative">
             <ShoppingBag className="w-5 h-5" />
             {cartTotalCount > 0 && (
-              <span className="absolute -top-1 -right-2 w-4 h-4 rounded-full bg-amber-500 text-slate-900 text-[9px] font-extrabold flex items-center justify-center">
+              <span className="absolute -top-1 right-0 translate-x-1 w-4 h-4 rounded-full bg-amber-500 text-slate-900 text-[9px] font-extrabold flex items-center justify-center">
                 {cartTotalCount}
               </span>
             )}

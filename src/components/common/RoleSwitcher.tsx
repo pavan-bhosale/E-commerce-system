@@ -24,7 +24,7 @@ export const RoleSwitcher: React.FC<RoleSwitcherProps> = ({ fullWidthOnMobile = 
 
   return (
     <div
-      className={`inline-flex items-center p-1 bg-slate-200/70 rounded-xl border border-slate-200 shadow-2xs ${
+      className={`inline-flex items-center gap-1 p-1 bg-slate-200/70 rounded-xl border border-slate-200 shadow-2xs ${
         fullWidthOnMobile ? 'w-full max-w-sm sm:max-w-none sm:w-auto justify-center' : ''
       }`}
     >

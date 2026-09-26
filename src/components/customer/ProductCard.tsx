@@ -31,29 +31,29 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         />
 
         {/* Badges Overlay */}
-        <div className="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
-          <span className="px-2 py-0.5 rounded-md font-mono text-[10px] font-bold bg-white/90 backdrop-blur-xs text-slate-800 shadow-2xs border border-white/50">
+        <div className="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10 max-w-[55%]">
+          <span className="px-2 py-0.5 rounded-md font-mono text-[10px] font-bold bg-white/90 backdrop-blur-xs text-slate-800 shadow-2xs border border-white/50 truncate">
             {product.modelNumber}
           </span>
           {product.purity.includes('22K') ? (
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-amber-500/90 text-white shadow-2xs backdrop-blur-xs">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-amber-500/90 text-white shadow-2xs backdrop-blur-xs truncate">
               22K 916
             </span>
           ) : (
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-slate-800/80 text-white shadow-2xs backdrop-blur-xs">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-slate-800/80 text-white shadow-2xs backdrop-blur-xs truncate">
               18K 750
             </span>
           )}
         </div>
 
         {/* Stock status badge */}
-        <div className="absolute top-2.5 right-2.5 z-10">
+        <div className="absolute top-2.5 right-2.5 z-10 max-w-[40%]">
           {product.status === 'In Stock' ? (
-            <span className="px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-semibold bg-emerald-600/90 text-white shadow-2xs backdrop-blur-xs">
+            <span className="px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-semibold bg-emerald-600/90 text-white shadow-2xs backdrop-blur-xs block truncate text-center">
               Stock: {product.stock}
             </span>
           ) : (
-            <span className="px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-semibold bg-blue-600/90 text-white shadow-2xs backdrop-blur-xs">
+            <span className="px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-semibold bg-blue-600/90 text-white shadow-2xs backdrop-blur-xs block truncate text-center">
               MTO
             </span>
           )}

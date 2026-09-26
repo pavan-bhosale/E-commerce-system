@@ -22,7 +22,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
       {/* Primary Top Bar */}
       <div className="px-3 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2">
         {/* Left Area: Dedicated Mobile Hamburger Button & Brand */}
-        <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0 min-w-0">
+        <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0">
           {/* Dedicated Hamburger with guaranteed 44x44px touch area */}
           <button
             type="button"
@@ -34,7 +34,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
           </button>
 
           {/* Mobile Brand Identity */}
-          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 flex-shrink-0">
+          <div className="flex lg:hidden items-center gap-2 flex-shrink-0">
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#0b1e36] text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
               <Gem className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
             </div>
@@ -65,7 +65,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
         </div>
 
         {/* Right Area: Search (Mobile), Desktop RoleSwitcher, Notifications, Profile, Desktop Actions */}
-        <div className="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
+        <div className="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
           {/* Mobile Search Icon Button */}
           <button
             type="button"
@@ -91,7 +91,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({
           >
             <Bell className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             {unreadNotificationCount > 0 && (
-              <span className="absolute -top-1 -right-1 min-w-[16px] h-[16px] sm:min-w-[18px] sm:h-[18px] px-1 rounded-full bg-rose-500 text-white text-[9px] sm:text-[10px] font-bold flex items-center justify-center border-2 border-white pointer-events-none shadow-2xs">
+              <span className="absolute -top-1 right-0 min-w-[15px] h-[15px] sm:min-w-[17px] sm:h-[17px] px-1 rounded-full bg-rose-500 text-white text-[9px] sm:text-[10px] font-bold flex items-center justify-center border-2 border-white pointer-events-none shadow-2xs">
                 {unreadNotificationCount}
               </span>
             )}

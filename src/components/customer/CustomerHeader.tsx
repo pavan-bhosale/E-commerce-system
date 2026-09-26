@@ -66,7 +66,7 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({ onOpenCart }) =>
         </div>
 
         {/* Right Area: Search, Desktop RoleSwitcher, Cart Trigger */}
-        <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           {/* Quick Search Trigger */}
           <button
             type="button"
@@ -87,12 +87,12 @@ export const CustomerHeader: React.FC<CustomerHeaderProps> = ({ onOpenCart }) =>
           <button
             type="button"
             onClick={onOpenCart}
-            className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-[#0b1e36] text-white hover:bg-[#162f50] active:bg-[#071322] transition-all shadow-xs cursor-pointer"
+            className="w-9 h-9 sm:w-auto sm:h-auto flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-[#0b1e36] text-white hover:bg-[#162f50] active:bg-[#071322] transition-all shadow-xs cursor-pointer"
           >
             <div className="relative">
               <ShoppingBag className="w-4 h-4 text-amber-400" />
               {cartTotalCount > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-amber-500 text-slate-950 text-[10px] font-extrabold flex items-center justify-center shadow-2xs">
+                <span className="absolute -top-1 right-0 translate-x-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-amber-500 text-slate-950 text-[9px] sm:text-[10px] font-extrabold flex items-center justify-center shadow-2xs">
                   {cartTotalCount}
                 </span>
               )}

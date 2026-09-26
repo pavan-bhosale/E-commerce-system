@@ -129,29 +129,33 @@ export const CustomerMyOrdersPage: React.FC = () => {
                 {/* Order Summary Header Row */}
                 <div
                   onClick={() => setExpandedOrderId(isExpanded ? null : order.id)}
-                  className="p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/60 transition-colors"
+                  className="p-4 sm:p-5 flex items-start sm:items-center justify-between gap-3 cursor-pointer hover:bg-slate-50/60 transition-colors"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                  <div className="flex items-start sm:items-center gap-3 min-w-0 flex-1">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5 sm:mt-0">
                       <ClipboardList className="w-5 h-5 text-blue-600" />
                     </div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-mono text-base font-bold text-slate-900">
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="font-mono text-sm sm:text-base font-bold text-slate-900">
                           #{order.orderNumber}
                         </span>
                         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border ${statusB.bg}`}>
                           {statusB.label}
                         </span>
                       </div>
-                      <div className="text-xs text-slate-500 mt-0.5">
+                      <div className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
                         Booked: {formatDate(order.orderDate)} • Target Delivery: {formatDate(order.requiredDate)}
+                      </div>
+                      <div className="sm:hidden mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span className="text-slate-400">Total Purchase:</span>
+                        <span className="font-mono font-bold text-slate-900">{formatCurrency(order.totalAmount)}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-6">
-                    <div className="text-right">
+                  <div className="flex items-center gap-4 sm:gap-6 flex-shrink-0">
+                    <div className="hidden sm:block text-right">
                       <div className="text-xs text-slate-400">Total Purchase</div>
                       <div className="font-mono text-sm sm:text-base font-bold text-slate-900">
                         {formatCurrency(order.totalAmount)}
@@ -165,11 +169,13 @@ export const CustomerMyOrdersPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <ChevronDown
-                      className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${
-                        isExpanded ? 'rotate-180 text-blue-600' : ''
-                      }`}
-                    />
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-500 flex-shrink-0">
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180 text-blue-600' : ''
+                        }`}
+                      />
+                    </div>
                   </div>
                 </div>
 
